@@ -1,5 +1,5 @@
 // Supabase REST. 아래 두 값만 본인 프로젝트 값으로 교체
-const SB_URL = 'https://vepyomymbmqpxgszeuci.supabase.co/rest/v1';   // 끝에 / 나 /rest/v1 붙이지 말 것
+const SB_URL = 'https://vepyomymbmqpxgszeuci.supabase.co';   // 끝에 / 나 /rest/v1 붙이지 말 것
 const SB_KEY = 'sb_publishable_8jqYq0Gjnl0CXWYoNer7OA_SE66zJUQ';               // anon(eyJ...) 또는 publishable(sb_publishable_...) 키
 
 const H = { apikey: SB_KEY, 'Content-Type': 'application/json' };
