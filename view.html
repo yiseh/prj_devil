@@ -7,7 +7,8 @@
 <script>
 getEntries().then(rows=>{
  const ul=document.getElementById('list');
- if(!Array.isArray(rows)||!rows.length)return ul.textContent='데이터가 없습니다.';
+ if(rows.error)return ul.textContent='오류: '+rows.error;
+ if(!rows.length)return ul.textContent='데이터가 없습니다.';
  rows.forEach(r=>{const li=document.createElement('li');li.textContent=r.value;   // textContent: XSS 방지
   const s=document.createElement('small');s.textContent=new Date(r.created_at).toLocaleString('ko-KR');li.append(s);ul.append(li)});
 });

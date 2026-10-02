@@ -64,6 +64,6 @@ $('q').onkeydown=async e=>{
   o.frequency.exponentialRampToValueAtTime(1600,ac.currentTime+2.8);g.gain.value=.15;o.connect(g);g.connect(m);o.start();o.stop(ac.currentTime+3)}
  await new Promise(r=>setTimeout(r,3000));
  $('p1').classList.add('off');$('p2').classList.remove('off');$('fl').style.cssText='transition:opacity 1s;opacity:0';  // 2번 페이지
- if(!await ok)console.warn('저장 실패: db.js 설정/RLS 확인');
+ const r=await ok;if(r!==true){console.error('저장 실패:',r);alert('저장 실패: '+r)}
 };
 </script></body></html>
